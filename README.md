@@ -8,8 +8,10 @@ RockPaperScissors is an interactive game. There are two competitors that will ch
 
 1) Download the code from the main branch
 
-2) Open a terminal (e.g. the terminal that came with your gnu/linux distribution, PowerShell on Windows, terminal on macOS or Termux on Android)
+2) Open a terminal (e.g. the terminal that came with your GNU/Linux distribution, PowerShell on Windows, terminal on macOS or Termux on Android)
 
-3) Go into the directory of the game
+3) Change into the directory of the game
 
 4) Run ./start.sh
+
+If you have already downloaded the source code, unzip the archive and follow steps 2-4.
