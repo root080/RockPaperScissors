@@ -1,7 +1,7 @@
 def rockPaperScissors(NAME_USER1, NAME_USER2):
     txt = True
     
-    while txt == True:
+    while txt:
         import getpass
         U1 = 0
         U2 = 0
