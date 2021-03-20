@@ -1,4 +1,4 @@
-#!/usr/bin/python3.8
+# Modifications Copyright (C) 2021 Andrew F
 
 def rockPaperScissors(NAME_USER1, NAME_USER2):
     txt = True
