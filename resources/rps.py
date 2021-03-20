@@ -25,6 +25,10 @@ while True:
         print("Unrecoverable error! Exiting")
         sys.exit()
 
+    r = ['rock', 'roc', 'rok', 'rck', 'ro', 'rc', 'rk', 'r']
+    p = ['paper', 'pape', 'aper', 'pper', 'p']
+    s = ['scissors', 'scissor', 'sissors', 'scssors', 'scis', 'sci', 's']
+        
     while roundCounter <= (rounds_to_play - 1) and (player_one_points < max_points and player_two_points < max_points):
         player_one_choice = getpass.getpass(prompt=player_one_name + ", Rock, paper or scissors? ")
         player_two_choice = getpass.getpass(prompt=player_two_name + ", Rock, paper or scissors? ")
@@ -32,30 +36,30 @@ while True:
         if player_one_choice == player_two_choice:
             print("Draw!")
             roundCounter += 1
-        elif player_one_choice in ["rock", "r"]:
-            if player_two_choice in ["paper", "p"]:
+        elif player_one_choice.lower() in r:
+            if player_two_choice.lower() in p:
                 print(player_two_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_two_points += 1
-            if player_two_choice in ["scissors", "s"]:
+            if player_two_choice.lower() in s:
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
-        elif player_one_choice in ["paper", "p"]:
-            if player_two_choice in ["scissors", "s"]:
+        elif player_one_choice.lower() in p:
+            if player_two_choice.lower() in s:
                 print(player_two_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_two_points += 1
-            if player_two_choice in ["rock", "r"]:
+            if player_two_choice.lower() in r:
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
-        elif player_one_choice in ["scissors", "s"]:
-            if player_two_choice in ["rock", "r"]:
+        elif player_one_choice.lower() in s:
+            if player_two_choice.lower() in r:
                 print(player_two_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_two_points += 1
-            if player_two_choice in ["paper", "p"]:
+            if player_two_choice.lower in p:
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
