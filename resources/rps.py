@@ -13,8 +13,8 @@ while True:
     player_one_points = 0
     player_two_points = 0
 
-    USER_INPUT = int(input("Would you like to play a certain number of rounds (1), or until a player gets a certain "
-                           "number of points (2)? "))
+    USER_INPUT = int(input("Would you like to play a certain number of rounds (1), or until a player gets a "
+                           "certain number of points (2)? "))
     if USER_INPUT == 1:
         rounds_to_play = int(input("How many rounds would you like to play? "))
         max_points = rounds_to_play / 2
@@ -32,30 +32,30 @@ while True:
         if player_one_choice == player_two_choice:
             print("Draw!")
             roundCounter += 1
-        elif player_one_choice in ["rock", "r"]:
-            if player_two_choice in ["paper", "p"]:
+        elif player_one_choice in "rock":
+            if player_two_choice in "paper":
                 print(player_two_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_two_points += 1
-            if player_two_choice in ["scissors", "s"]:
+            if player_two_choice in "scissors":
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
-        elif player_one_choice in ["paper", "p"]:
-            if player_two_choice in ["scissors", "s"]:
+        elif player_one_choice in "paper":
+            if player_two_choice in "scissors":
                 print(player_two_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_two_points += 1
-            if player_two_choice in ["rock", "r"]:
+            if player_two_choice in "rock":
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
-        elif player_one_choice in ["scissors", "s"]:
-            if player_two_choice in ["rock", "r"]:
+        elif player_one_choice in "scissors":
+            if player_two_choice in "rock":
                 print(player_two_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_two_points += 1
-            if player_two_choice in ["paper", "p"]:
+            if player_two_choice in "paper":
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
@@ -78,7 +78,7 @@ while True:
 
     USER_INPUT = input("Would you like to play again? [y/n] ")
 
-    if USER_INPUT in ["Y", "y", "Yes", "yes"]:
+    if USER_INPUT in "yes":
         print("Let's play again then!")
     else:
         print("OK, Goodbye!")
