@@ -56,6 +56,7 @@ while True:
                 roundCounter += 1
                 player_two_points += 1
             if player_two_choice in "paper":
+
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
