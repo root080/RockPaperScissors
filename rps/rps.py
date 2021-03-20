@@ -1,49 +1,57 @@
-def rockPaperScissors(NAME_USER1, NAME_USER2):
+# RockPaperScissors main code 1.0.1
+
+import getpass
+
+def rockPaperScissors(USER_NAME1, USER_NAME2):
     txt = True
     
     while txt:
-        import getpass
-        U1 = 0
-        U2 = 0
-    
-        while U1 <= 10 and U2 <= 10:
+        
+        POINTS_USER1 = 0
+        POINTS_USER2 = 0
+        
+        r = ['rock', 'roc', 'rok', 'rck', 'ro', 'rc', 'rk', 'r']
+        p = ['paper', 'pape', 'aper', 'pper', 'p']
+        s = ['scissors', 'scissor', 'sissors', 'scssors', 'scis', 'sci', 's']
+        
+        while POINTS_USER1 <= 10 and POINTS_USER2 <= 10:
             USER1 = getpass.getpass("Rock, paper or scissors ? ", None)
             USER2 = getpass.getpass("Rock, paper or scissors ? ", None)
     
-            if USER1 in [rock, r]:
-                if USER2 in [paper, p]:
-                    print(NAME_USER2, " won !", "\nCongratulation !")
-                    U2 += 1
-                if USER2 in [scissors, s]:
-                    print(NAME_USER1, " won !", "\nCongratulation !")
-                    U1 += 1
-            if USER1 in [paper, p]:
+            if USER1.lower() in r:
+                if USER2.lower() in p:
+                    print(USER_NAME2, " won !", "\nCongratulation !")
+                    POINTS_USER2 += 1
+                if USER2.lower() in s:
+                    print(USER_NAME1, " won !", "\nCongratulation !")
+                    POINTS_USER1 += 1
+            if USER1 in p:
                 if USER2 in [rock, r]:
-                    print(NAME_USER1, " won !", "\nCongratulation !")
-                    U1 += 1
+                    print(USER_NAME1, " won !", "\nCongratulation !")
+                    POINTS_USER1 += 1
                 if USER2 in [scissors, s]:
-                    print(NAME_USER2, " won !", "\nCongratulation !")
-                    U2 += 1
+                    print(USER_NAME2, " won !", "\nCongratulation !")
+                    POINTS_USER2 += 1
             if USER1 in [scissors, s]:
                 if USER2 in [rock, r]:
-                    print(NAME_USER2, " won !", "\nCongratulation !")
-                    U2 += 1
+                    print(USER_NAME2, " won !", "\nCongratulation !")
+                    POINTS_USER2 += 1
                 if USER2 in [paper, p]:
-                    print(NAME_USER1, " won !", "\nCongratulation !")
-                    U1 += 1
+                    print(USER_NAME1, " won !", "\nCongratulation !")
+                    POINTS_USER1 += 1
             elif USER1 == USER2:
                 print("Draw")
             else:
                 print("Error... Try again")
 
-            print(NAME_USER1, ": ", U1, " vs ", NAME_USER2, ": ", U2)
+            print(USER_NAME1, ": ", POINTS_USER1, " vs ", USER_NAME2, ": ", POINTS_USER2)
             
         print('G A M E  O V E R')
         
-        if U1 == 10:
-            print(NUME_USER1, ' won the game !')
-        elif U2 == 10:
-            print(NUME_USER2, ' won the game !')
+        if POINTS_USER1 == 10:
+            print(USER_NAME1, ' won the game !')
+        elif POINTS_USER2 == 10:
+            print(USER_NAME2, ' won the game !')
             
         txt2 = input('Would you like to play again ?[Y/n]')
         
