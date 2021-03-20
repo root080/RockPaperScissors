@@ -13,8 +13,8 @@ while True:
     player_one_points = 0
     player_two_points = 0
 
-    USER_INPUT = int(input("Would you like to play a certain number of rounds (1), or until a player gets a certain "
-                           "number of points (2)? "))
+    USER_INPUT = int(input("Would you like to play a certain number of rounds (1), or until a player gets a "
+                           "certain number of points (2)? "))
     if USER_INPUT == 1:
         rounds_to_play = int(input("How many rounds would you like to play? "))
         max_points = rounds_to_play / 2
@@ -82,7 +82,7 @@ while True:
 
     USER_INPUT = input("Would you like to play again? [y/n] ")
 
-    if USER_INPUT in ["Y", "y", "Yes", "yes"]:
+    if USER_INPUT in "yes":
         print("Let's play again then!")
     else:
         print("OK, Goodbye!")
