@@ -1,3 +1,5 @@
+#!/usr/bin/python3.8
+
 def rockPaperScissors(NAME_USER1, NAME_USER2):
     txt = True
     
