@@ -25,11 +25,14 @@ while True:
         print("Unrecoverable error! Exiting")
         sys.exit()
 
-    while roundCounter <= (rounds_to_play - 1) or (player_one_points < max_points and player_two_points < max_points):
+    while roundCounter <= (rounds_to_play - 1) and (player_one_points < max_points and player_two_points < max_points):
         player_one_choice = getpass.getpass(prompt=player_one_name + ", Rock, paper or scissors? ")
         player_two_choice = getpass.getpass(prompt=player_two_name + ", Rock, paper or scissors? ")
 
-        if player_one_choice in ["rock", "r"]:
+        if player_one_choice == player_two_choice:
+            print("Draw!")
+            roundCounter += 1
+        elif player_one_choice in ["rock", "r"]:
             if player_two_choice in ["paper", "p"]:
                 print(player_two_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
@@ -56,9 +59,6 @@ while True:
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
-        elif player_one_choice == player_two_choice:
-            roundCounter += 1
-            print("Draw!")
         else:
             print("Unrecoverable error! Exiting")
             sys.exit()
