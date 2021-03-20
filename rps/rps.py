@@ -25,14 +25,14 @@ def rockPaperScissors(USER_NAME1, USER_NAME2):
                 if USER2.lower() in s:
                     print(USER_NAME1, " won !", "\nCongratulation !")
                     POINTS_USER1 += 1
-            if USER1 in p:
+            elif USER1 in p:
                 if USER2 in [rock, r]:
                     print(USER_NAME1, " won !", "\nCongratulation !")
                     POINTS_USER1 += 1
                 if USER2 in [scissors, s]:
                     print(USER_NAME2, " won !", "\nCongratulation !")
                     POINTS_USER2 += 1
-            if USER1 in [scissors, s]:
+            elif USER1 in [scissors, s]:
                 if USER2 in [rock, r]:
                     print(USER_NAME2, " won !", "\nCongratulation !")
                     POINTS_USER2 += 1
