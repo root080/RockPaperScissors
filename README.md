@@ -2,7 +2,7 @@
 
 RockPaperScissors is an interactive game. There are two competitors that will choose between stone, paper or scissors, after each round the winner get one point according to the following rules: stone beats scissors, paper beats stone and scissors beat the paper. After this, the winner is the competitor who earn 10 points before his enemy.
 
-# FQ
+# FAQ
 
 How can I install RockPaperScissors ?
 
