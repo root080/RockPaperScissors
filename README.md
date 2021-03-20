@@ -8,7 +8,7 @@ RockPaperScissors is an interactive game. There are two competitors that will ch
 
 1) Download the code from the main branch
 
-2) Open a terminal (ex. the terminal that came with your gnu/linux distribution, PowerShell on Windows, terminal on macOS or Termux on Android)
+2) Open a terminal (e.g. the terminal that came with your gnu/linux distribution, PowerShell on Windows, terminal on macOS or Termux on Android)
 
 3) Go into the directory of the game
 
