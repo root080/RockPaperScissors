@@ -16,7 +16,7 @@ The install procces of RockPaperScissors feature is easyer then the original ver
 
 3) For Windows, install Power Shell(recomended): https://aka.ms/powershell-release?tag=stable
 
-4.1) If you want to run this code on your MacOS Desktop/laptop, open UNIX terminal, run 'brew python3.8'(if you don't have already installed it). After this, the competitors need do write their names, and the program will ask you to input rock, paper or scissors(you can input r, p or s too)
+4.1) If you want to run this code on your MacOS Desktop/laptop, go to main branch and follow all steps mentioned in README.md
 
 4.2) For Linux distributions(Ubuntu, Debian, PopOS, Kali Linux) or Linux-Based terminals(Termux, Power Shell) open Linux terminal, type './rps.py'. After this, the competitors need do write their names, and the program will ask you to input rock, paper or scissors(you can input r, p or s too)
 
