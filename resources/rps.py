@@ -25,41 +25,45 @@ while True:
         print("Unrecoverable error! Exiting")
         sys.exit()
 
-    r = ['rock', 'roc', 'rok', 'rck', 'ro', 'rc', 'rk', 'r']
-    p = ['paper', 'pape', 'aper', 'pper', 'p']
-    s = ['scissors', 'scissor', 'sissors', 'scssors', 'scis', 'sci', 's']
+    word_rock = ['rock', 'roc', 'rok', 'rck', 'ro', 'rc', 'rk', 'r']
+    word_paper = ['paper', 'pape', 'aper', 'pper', 'p']
+    word_scissors = ['scissors', 'scissor', 'sissors', 'scssors', 'scis', 'sci', 's']
         
     while roundCounter <= (rounds_to_play - 1) and (player_one_points < max_points and player_two_points < max_points):
-        player_one_choice = getpass.getpass(prompt=player_one_name + ", Rock, paper or scissors? ")
-        player_two_choice = getpass.getpass(prompt=player_two_name + ", Rock, paper or scissors? ")
+        USER_INPUT = getpass.getpass(prompt=player_one_name + ", Rock, paper or scissors? ")
+        USER_INPUT = USER_INPUT.strip()
+        player_one_choice = USER_INPUT.lower()
+        USER_INPUT = getpass.getpass(prompt=player_two_name + ", Rock, paper or scissors? ")
+        USER_INPUT = USER_INPUT.strip()
+        player_two_choice = USER_INPUT.lower()
 
         if player_one_choice == player_two_choice:
             print("Draw!")
             roundCounter += 1
-        elif player_one_choice.lower() in r:
-            if player_two_choice.lower() in p:
+        elif player_one_choice in word_rock:
+            if player_two_choice in word_paper:
                 print(player_two_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_two_points += 1
-            if player_two_choice.lower() in s:
+            if player_two_choice in word_scissors:
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
-        elif player_one_choice.lower() in p:
-            if player_two_choice.lower() in s:
+        elif player_one_choice in word_paper:
+            if player_two_choice in word_scissors:
                 print(player_two_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_two_points += 1
-            if player_two_choice.lower() in r:
+            if player_two_choice in word_rock:
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
-        elif player_one_choice.lower() in s:
-            if player_two_choice.lower() in r:
+        elif player_one_choice in word_scissors:
+            if player_two_choice in word_rock:
                 print(player_two_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_two_points += 1
-            if player_two_choice.lower in p:
+            if player_two_choice in word_paper:
                 print(player_one_name + " won the round!" + "\nCongratulations!")
                 roundCounter += 1
                 player_one_points += 1
