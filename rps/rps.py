@@ -45,7 +45,7 @@ def rockPaperScissors(NAME_USER1, NAME_USER2):
         elif U2 == 10:
             print(NUME_USER2, ' won the game !')
             
-        txt2 = input('Would you like to play again ?[Y/n])
+        txt2 = input('Would you like to play again ?[Y/n]')
         
         if txt2 in ["Y", "y", "Yes", "yes"]:
             print("Run the code...")
