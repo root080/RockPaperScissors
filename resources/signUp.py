@@ -1,8 +1,5 @@
 # Created by AlexC
 
-from SignUp import email
-from SignUp import password
-
 import sys
 import getpass
 
@@ -93,6 +90,9 @@ def signUp():
         print("Error...")
         
 
+from SignUp import email
+from SignUp import password
+        
 USER_INPUT = input("Have you already an accont ?[Y/n] ")
 
 if USER_INPUT in ["Yes", "yes", "ye", "Y", "y"]:
