@@ -1,4 +1,4 @@
-# Modifications Copyright (C) 2021 Andrew F
+# Copyright (C) 2021 Alex C
 
 import sys
 import getpass
