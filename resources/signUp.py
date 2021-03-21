@@ -1,9 +1,12 @@
 # Created by AlexC
 
-def signUp():
-    import sys
-    import getpass
+from SignUp import email
+from SignUp import password
 
+import sys
+import getpass
+
+def signUp():
     lastName = input("Last Name: ")
     surname = input("Surname: ")
     age = input("Age: ")
