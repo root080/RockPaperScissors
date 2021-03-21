@@ -1,4 +1,4 @@
-# Created by AlexC
+# Copyright (C) 2021 Alex C
 
 import sys
 import getpass
@@ -64,12 +64,12 @@ def signUp():
                                 print("Signup process finished")
                                 print("from: contact@alexc.com \nto: " + email)
                                 print("Hi, " + name)
-                                print("Congratulation, you've created your RockPaperScissors account. Now you're ready to play. But, before this, I want to tell you more "
-                                      "about this project. RockPaperScissors was a simple project idea, inital created on my computer for learning Python programing. "
+                                print("Congratulation, you've created your RockPaperScissors account. Now you're ready to play. But, before that, I want to tell you more "
+                                      "about the project. RockPaperScissors was initially a simple project idea, initially created on my computer for learning Python programing. "
                                       "But everything changed after I decided to create a repository on GitHub with this idea. I've created two branches: main, where I "
                                       "upload my initial code and feature, that I recommend you to install(if you don't have MacOS), a branch with a better version of game "
                                       "code and a bite of shell, to automate the process. The update of the feature version, where initially I put the same code as in the "
-                                      "main branch, was possible with Andrew F help and I thank him for the contribution \nAlexC, owner of RockPaperScissors project")
+                                      "main branch, was possible with thefirethirteen's help and I thank them for the contribution \nAlex C, owner of the RockPaperScissors project")
                                 break
                             else:
                                 print("There is not the same password. Retype it !")
@@ -77,11 +77,11 @@ def signUp():
                     elif nrIncercari == 3:
                         print("One more try")
                     elif nrIncercari == 4:
-                        print("Your security code is incorect.")
-                        print("End proram...")
+                        print("The security code is incorect.")
+                        print("End program...")
                         sys.exit()
                     else:
-                        print("Incorect security code. Retype it")
+                        print("Incorrect security code. Please try again")
                         nrIncercari += 1
 
     elif USER_INPUT in ["No", "no", "N", "n"]:
@@ -90,27 +90,22 @@ def signUp():
     else:
         print("Error...")
         
-
-from SignUp import email
-from SignUp import password
-        
-USER_INPUT = input("Have you already an accont ?[Y/n] ")
+USER_INPUT = input("Have you already an account ?[Y/n] ")
 
 if USER_INPUT in ["Yes", "yes", "ye", "Y", "y"]:
-    repond = True
-    while repond:
-        EMAIL_INPUT = input("E-mail Adress: ")
+    response = True
+    while response:
+        EMAIL_INPUT = input("E-mail Address: ")
             if EMAIL_INPUT == name:
-            PASSWORD_INPUT = getpass.getpass("Password: ")
+                PASSWORD_INPUT = getpass.getpass("Password: ")
                 if PASSWORD_INPUT == password:
-                print("Loged In")
+                print("Logged In")
                 break
             else:
                 print("Incorrect password. Try again...")
             else:
                 print("This username does not exist")
 elif USER_INPUT in ["No", "no", "N", "n"]:
-    SignUp()
+    signUp()
 else:
-    print("Erorr...")
-
+    print("Error...")
