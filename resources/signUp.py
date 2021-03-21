@@ -88,5 +88,24 @@ def signUp():
         signUp()
     else:
         print("Error...")
+        
 
-signUp()
+USER_INPUT = input("Have you already an accont ?[Y/n] ")
+
+if USER_INPUT in ["Yes", "yes", "ye", "Y", "y"]:
+    repond = True
+    while repond:
+        EMAIL_INPUT = input("E-mail Adress: ")
+            if EMAIL_INPUT == name:
+            PASSWORD_INPUT = getpass.getpass("Password: ")
+                if PASSWORD_INPUT == password:
+                print("Loged In")
+            else:
+                print("Incorrect password. Try again...")
+            else:
+                print("This username does not exist")
+elif USER_INPUT in ["No", "no", "N", "n"]:
+    SignUp()
+else:
+    print("Erorr...")
+
