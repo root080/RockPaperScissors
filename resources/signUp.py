@@ -78,6 +78,7 @@ def signUp():
                         print("One more try")
                     elif nrIncercari == 4:
                         print("Your security code is incorect.")
+                        print("End proram...")
                         sys.exit()
                     else:
                         print("Incorect security code. Retype it")
@@ -103,6 +104,7 @@ if USER_INPUT in ["Yes", "yes", "ye", "Y", "y"]:
             PASSWORD_INPUT = getpass.getpass("Password: ")
                 if PASSWORD_INPUT == password:
                 print("Loged In")
+                break
             else:
                 print("Incorrect password. Try again...")
             else:
