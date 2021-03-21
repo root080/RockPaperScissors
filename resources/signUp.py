@@ -64,12 +64,12 @@ def signUp():
                                 print("Signup process finished")
                                 print("from: contact@alexc.com \nto: " + email)
                                 print("Hi, " + name)
-                                print("Congratulation, you've created your RockPaperScissors account. Now you're ready to play. But, before this, I want to tell you more about " 
-                                      "this project. RockPaperScissors was a simple project idea, inital created on my computer for learning Python programing. But everything "
-                                      "changed after I decided to create a repository on GitHub with this idea. I've created two branches: main, where I upload my initial code "
-                                      "and feature, that I recommend you to install(if you don't have MacOS), a branch with a better version of game code and a bite of shell, "
-                                      "to automate the process. The update of the feature version, where initially I put the same code as in the main branch, was possible with "
-                                      "Andrew F help and I thank him for the contribution \nAlexC, owner of RockPaperScissors project")
+                                print("Congratulation, you've created your RockPaperScissors account. Now you're ready to play. But, before this, I want to tell you more "
+                                      "about this project. RockPaperScissors was a simple project idea, inital created on my computer for learning Python programing. "
+                                      "But everything changed after I decided to create a repository on GitHub with this idea. I've created two branches: main, where I "
+                                      "upload my initial code and feature, that I recommend you to install(if you don't have MacOS), a branch with a better version of game "
+                                      "code and a bite of shell, to automate the process. The update of the feature version, where initially I put the same code as in the "
+                                      "main branch, was possible with Andrew F help and I thank him for the contribution \nAlexC, owner of RockPaperScissors project")
                                 break
                             else:
                                 print("There is not the same password. Retype it !")
