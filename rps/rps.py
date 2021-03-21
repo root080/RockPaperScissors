@@ -57,12 +57,11 @@ def rockPaperScissors(USER_NAME1, USER_NAME2):
         
         if txt2 in ["Y", "y", "Yes", "yes"]:
             print("Run the code...")
-            txt = True
         elif txt2 in ["N", "n", "No", "no"]:
-            print("OK")
-            txt = False
+            print("OK, thanks for playing !")
+            break
             
                      
 t1 = input("What's your name ?")
 t2 = input("What's your name ?")
-piatraHartieFoarfeca(t1, t2)
+rockPaperScissors(t1, t2)
