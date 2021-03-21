@@ -39,7 +39,7 @@ def signUp():
                     print("City required")
                     city = input("City: ")
 
-    USER_INPUT = input("Your name is " + name + " and you have " + age + " years old" + ". You live in " + city + "(" + postalCode + ")" ", on " + street + " street ?[Y/n] ")
+    USER_INPUT = input("Your name is " + name + " and you have " + age + " years old" + ". You live in " + city + "(" + postalCode + ")" ", " + street + " street ?[Y/n] ")
     if USER_INPUT in ["Yes", "yes", "ye", "Y", "y"]:
         if userPersonalData == existingUserData:
             print("This account already exist")
