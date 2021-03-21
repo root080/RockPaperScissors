@@ -4,4 +4,6 @@
 
 cd resources
 
+python3 signUp.py
+
 python3 rps.py
