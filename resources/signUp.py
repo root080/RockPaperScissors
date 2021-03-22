@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Alex C
+# signUp.py Copyright (C) 2021 Alex C
 
 import sys
 import getpass
