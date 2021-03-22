@@ -62,6 +62,7 @@ def signUp():
                             PASSWORD_INPUT = getpass.getpass("Type your password: ")
                             PASSWORD_VERIFICATION = getpass.getpass("Retype your password: ")
                             if PASSWORD_INPUT == PASSWORD_VERIFICATION:
+                                password = PASSWORD_INPUT
                                 print("Signup process finished")
                                 print("from: contact@alexc.com \nto: " + email)
                                 print("Hi, " + name)
