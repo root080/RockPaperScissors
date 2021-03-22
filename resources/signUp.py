@@ -4,21 +4,22 @@ import sys
 import getpass
 
 def signUp():
+    firstName = input("First Name: ")
     lastName = input("Last Name: ")
-    surname = input("Surname: ")
     age = input("Age: ")
-    email = input("Email Adress: ")
+    email = input("Email Address: ")
     city = input("City: ")
     street = input("Street: ")
     postalCode = input("Postal Code: ")
 
-    name = lastName + surname
-    adress = city + street + postalCode
+    global name
+    name = firstName + lastName
+    address = city + street + postalCode
 
     null = "unknown"
 
-    userAccountData = {'Nume': name, 'Password': '', 'E-mail': email}
-    userPersonalData = [name, age, adress, email]
+    userAccountData = {'Name': name, 'Password': '', 'E-mail': email}
+    userPersonalData = [name, age, address, email]
 
     existingUserData = ['Alex C', '30', null, 'contact@alexc.com']
 
@@ -34,7 +35,7 @@ def signUp():
                     surname = input("Surname: ")
                 while email == null:
                     print("E-mail required")
-                    email = input("Email Adress: ")
+                    email = input("Email Address: ")
                 while city == null:
                     print("City required")
                     city = input("City: ")
@@ -64,12 +65,16 @@ def signUp():
                                 print("Signup process finished")
                                 print("from: contact@alexc.com \nto: " + email)
                                 print("Hi, " + name)
-                                print("Congratulation, you've created your RockPaperScissors account. Now you're ready to play. But, before that, I want to tell you more "
-                                      "about the project. RockPaperScissors was initially a simple project idea, initially created on my computer for learning Python programing. "
-                                      "But everything changed after I decided to create a repository on GitHub with this idea. I've created two branches: main, where I "
-                                      "upload my initial code and feature, that I recommend you to install(if you don't have MacOS), a branch with a better version of game "
-                                      "code and a bite of shell, to automate the process. The update of the feature version, where initially I put the same code as in the "
-                                      "main branch, was possible with thefirethirteen's help and I thank them for the contribution \nAlex C, owner of the RockPaperScissors project")
+                                print("Congratulation, you've created your RockPaperScissors account. Now you're "
+                                      "ready to play. But, before that, I want to tell you more about the project. "
+                                      "RockPaperScissors was initially a simple project idea, for learning Python "
+                                      "programing. But everything changed after I decided to create a repository on "
+                                      "GitHub with this idea. I've created two branches: main, where I upload my "
+                                      "initial code and feature, that I recommend you to use, and a branch with a "
+                                      "better version of game code and a bit of shell, to automate the process. The "
+                                      "update of the feature version, where initially I put the same code as in the "
+                                      "main branch, was possible with thefirethirteen's help and I thank them for the "
+                                      "contribution \nAlex C, owner of the RockPaperScissors project")
                                 break
                             else:
                                 print("There is not the same password. Retype it !")
@@ -89,22 +94,22 @@ def signUp():
         signUp()
     else:
         print("Error...")
-        
-USER_INPUT = input("Have you already an account ?[Y/n] ")
+
+
+USER_INPUT = input("Do you already have an account? [y/n] ")
 
 if USER_INPUT in ["Yes", "yes", "ye", "Y", "y"]:
-    response = True
-    while response:
+    while True:
         EMAIL_INPUT = input("E-mail Address: ")
-            if EMAIL_INPUT == name:
-                PASSWORD_INPUT = getpass.getpass("Password: ")
-                if PASSWORD_INPUT == password:
+        if EMAIL_INPUT == name:
+            PASSWORD_INPUT = getpass.getpass("Password: ")
+            if PASSWORD_INPUT == password:
                 print("Logged In")
                 break
             else:
                 print("Incorrect password. Try again...")
-            else:
-                print("This username does not exist")
+        else:
+            print("This username does not exist")
 elif USER_INPUT in ["No", "no", "N", "n"]:
     signUp()
 else:
