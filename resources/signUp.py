@@ -1,4 +1,5 @@
-# signUp.py Copyright (C) 2021 Alex C
+# Here you can come and create your RockPaperScissors accont 
+# Copyright (C) 2021 Alex C
 
 import sys
 import getpass
