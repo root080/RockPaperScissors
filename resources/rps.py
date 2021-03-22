@@ -1,4 +1,5 @@
-# rps.py Copyright (C) 2021 Alex C
+# This is the main code of the game
+# Copyright (C) 2021 Alex C
 
 import sys
 import getpass
