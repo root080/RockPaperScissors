@@ -13,6 +13,7 @@ def signUp():
     postalCode = input("Postal Code: ")
 
     global name
+    global email
     name = firstName + lastName
     address = city + street + postalCode
 
@@ -63,6 +64,7 @@ def signUp():
                             PASSWORD_VERIFICATION = getpass.getpass("Retype your password: ")
                             if PASSWORD_INPUT == PASSWORD_VERIFICATION:
                                 password = PASSWORD_INPUT
+                                global password
                                 print("Signup process finished")
                                 print("from: contact@alexc.com \nto: " + email)
                                 print("Hi, " + name)
