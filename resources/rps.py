@@ -1,6 +1,7 @@
 # This is the main code of the game
 # Copyright (C) 2021 Alex C
 
+from signUp import name
 import sys
 import getpass
 
