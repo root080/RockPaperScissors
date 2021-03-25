@@ -5,7 +5,7 @@ from signUp import name
 import sys
 import getpass
 
-USER_INPUT = input("Player One, What's your name? ")
+USER_INPUT = name
 player_one_name = USER_INPUT.strip()
 USER_INPUT = input("Player Two, What's your name? ")
 player_two_name = USER_INPUT.strip()
